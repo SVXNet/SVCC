@@ -1,3 +1,5 @@
+using CodeCamp.Core.Services;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 
 namespace CodeCamp.Core
@@ -11,7 +13,7 @@ namespace CodeCamp.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.HomeViewModel>();
         }
     }
 }

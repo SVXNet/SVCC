@@ -1,8 +1,8 @@
 ﻿namespace CodeCamp.WindowsUWP.Views
 {
-    public sealed partial class FirstView
+    public sealed partial class HomeView
     {
-        public FirstView()
+        public HomeView()
         {
             InitializeComponent();
         }
