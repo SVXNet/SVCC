@@ -35,6 +35,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Helpers\Grouping.cs" />
+    <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\Speakerslist.cs" />
     <Compile Include="Models\Tagsresult.cs" />

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using CodeCamp.Core.Models;
 
 namespace CodeCamp.Core.Services
@@ -12,6 +13,6 @@ namespace CodeCamp.Core.Services
             Add/Remove from favorites (use Settings with array of session ids)
              
              */
-        Task<Session[]> GetAllSessionsAsync();
+        Task<List<Session>> GetAllSessionsAsync();
     }
 }

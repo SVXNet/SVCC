@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using CodeCamp.Core.Models;
@@ -15,7 +16,7 @@ namespace CodeCamp.Core.Services
             _jsonConverter = jsonConverter;
         }
 
-        public async Task<Session[]> GetAllSessionsAsync()
+        public async Task<List<Session>> GetAllSessionsAsync()
         {
             var url = "https://www.siliconvalley-codecamp.com/rest/session/arrayonly";
 
@@ -23,7 +24,7 @@ namespace CodeCamp.Core.Services
             var result = await httpClient.GetAsync(new Uri(url));
             var sessions = _jsonConverter.DeserializeObject<Session[]>(await result.Content.ReadAsStringAsync());
 
-            return sessions;
+            return new List<Session>(sessions);
         }
     }
 }
