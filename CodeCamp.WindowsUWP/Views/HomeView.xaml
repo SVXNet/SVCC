@@ -7,6 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <local:BaseView.Resources>
+        <CollectionViewSource  x:Key="groupedSessions" 
+                               Source="{Binding GroupedSessions, Mode=OneWay}"
+                               IsSourceGrouped="True" />
         <DataTemplate x:Key="SessionItemTemplate">
             <Grid>
                 <TextBlock Text="{Binding title}"></TextBlock>
@@ -15,7 +18,18 @@
     </local:BaseView.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView ItemsSource="{Binding Sessions}" SelectedItem="{Binding SelectedSession, Mode=TwoWay}" ItemTemplate="{StaticResource SessionItemTemplate}" />
+        <ListView ItemsSource="{Binding Source={StaticResource groupedSessions}}" SelectedItem="{Binding SelectedSession, Mode=TwoWay}" ItemTemplate="{StaticResource SessionItemTemplate}">
+
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Key}"></TextBlock>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
+        </ListView>
 
     </Grid>
 </local:BaseView>
