@@ -15,9 +15,9 @@ namespace CodeCamp.Core.ViewModels
         {
         }
 
-        public ObservableRangeCollection<Session> Sessions { get; set; } = new ObservableRangeCollection<Session>();
+        //public ObservableRangeCollection<Session> Sessions { get; set; } = new ObservableRangeCollection<Session>();
 
-        public IEnumerable<Grouping<string, Session>> GroupedSessions { get; set; }
+        public ObservableRangeCollection<Grouping<string, Session>> GroupedSessions { get; set; } = new ObservableRangeCollection<Grouping<string, Session>>();
 
         private Session _selectedSession;
         public Session SelectedSession
@@ -54,10 +54,8 @@ namespace CodeCamp.Core.ViewModels
                          orderby session.startTime
                          group session by session.sessionTime into sessionGroup
                          select new Grouping<string, Session>(sessionGroup.Key, sessionGroup);
-            GroupedSessions = sorted;
-
-            Sessions.Clear();
-            Sessions.AddRange(sessions);
+            GroupedSessions.Clear();
+            GroupedSessions.AddRange(sorted);
 
             IsBusy = false;
         }
