@@ -26,6 +26,46 @@ namespace CodeCamp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxBind = global::CodeCamp.Droid.Resource.Attribute.MvxBind;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxDropDownItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxGroupItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxLang = global::CodeCamp.Droid.Resource.Attribute.MvxLang;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxSource = global::CodeCamp.Droid.Resource.Attribute.MvxSource;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxTemplateSelector = global::CodeCamp.Droid.Resource.Attribute.MvxTemplateSelector;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.layoutManager = global::CodeCamp.Droid.Resource.Attribute.layoutManager;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.reverseLayout = global::CodeCamp.Droid.Resource.Attribute.reverseLayout;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.spanCount = global::CodeCamp.Droid.Resource.Attribute.spanCount;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.stackFromEnd = global::CodeCamp.Droid.Resource.Attribute.stackFromEnd;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::CodeCamp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::CodeCamp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::CodeCamp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Id.MvvmCrossTagId = global::CodeCamp.Droid.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Id.MvxBindingTagUnique = global::CodeCamp.Droid.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Id.item_touch_helper_previous_elevation = global::CodeCamp.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.String.ApplicationName = global::CodeCamp.Droid.Resource.String.ApplicationName;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.String.Hello = global::CodeCamp.Droid.Resource.String.Hello;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxBinding = global::CodeCamp.Droid.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxBinding_MvxBind = global::CodeCamp.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxBinding_MvxLang = global::CodeCamp.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxControl = global::CodeCamp.Droid.Resource.Styleable.MvxControl;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxControl_MvxTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxExpandableListView = global::CodeCamp.Droid.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxImageView = global::CodeCamp.Droid.Resource.Styleable.MvxImageView;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxImageView_MvxSource = global::CodeCamp.Droid.Resource.Styleable.MvxImageView_MvxSource;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxListView = global::CodeCamp.Droid.Resource.Styleable.MvxListView;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxListView_MvxItemTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxRecyclerView = global::CodeCamp.Droid.Resource.Styleable.MvxRecyclerView;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.MvxRecyclerView_MvxTemplateSelector = global::CodeCamp.Droid.Resource.Styleable.MvxRecyclerView_MvxTemplateSelector;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.RecyclerView = global::CodeCamp.Droid.Resource.Styleable.RecyclerView;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.RecyclerView_android_orientation = global::CodeCamp.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.RecyclerView_layoutManager = global::CodeCamp.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.RecyclerView_reverseLayout = global::CodeCamp.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.RecyclerView_spanCount = global::CodeCamp.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Styleable.RecyclerView_stackFromEnd = global::CodeCamp.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::CodeCamp.Droid.Resource.Attribute.MvxBind;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxGroupItemTemplate;
@@ -4080,10 +4120,13 @@ namespace CodeCamp.Droid
 			public const int session_item = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int SplashScreen = 2130903090;
+			public const int sessions_headeritem = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int support_simple_spinner_dropdown_item = 2130903091;
+			public const int SplashScreen = 2130903091;
+			
+			// aapt resource value: 0x7f030034
+			public const int support_simple_spinner_dropdown_item = 2130903092;
 			
 			static Layout()
 			{

@@ -4,16 +4,11 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
-  <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    local:MvxBind="ItemsSource Sessions; ItemClick ListItemTappedWithItemCommand"
-    local:MvxItemTemplate="@layout/session_item"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentRight="true" />
-
+  <MvvmCross.Android.Controls.SectionedRecyclerView.MvxSectionedRecyclerView
+      android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        local:MvxBind="ItemsSource GroupedSessions"
+        local:MvxItemTemplate="@layout/session_item"
+        local:MvxGroupItemTemplate="@layout/sessions_headeritem" />
 </LinearLayout>
