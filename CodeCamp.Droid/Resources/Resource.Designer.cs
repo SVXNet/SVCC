@@ -26,6 +26,29 @@ namespace CodeCamp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxBind = global::CodeCamp.Droid.Resource.Attribute.MvxBind;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxGroupItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxItemTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxLang = global::CodeCamp.Droid.Resource.Attribute.MvxLang;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxSource = global::CodeCamp.Droid.Resource.Attribute.MvxSource;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Attribute.MvxTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Id.MvvmCrossTagId = global::CodeCamp.Droid.Resource.Id.MvvmCrossTagId;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Id.MvxBindingTagUnique = global::CodeCamp.Droid.Resource.Id.MvxBindingTagUnique;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.String.ApplicationName = global::CodeCamp.Droid.Resource.String.ApplicationName;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.String.Hello = global::CodeCamp.Droid.Resource.String.Hello;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxBinding = global::CodeCamp.Droid.Resource.Styleable.MvxBinding;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxBinding_MvxBind = global::CodeCamp.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxBinding_MvxLang = global::CodeCamp.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxControl = global::CodeCamp.Droid.Resource.Styleable.MvxControl;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxExpandableListView = global::CodeCamp.Droid.Resource.Styleable.MvxExpandableListView;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxImageView = global::CodeCamp.Droid.Resource.Styleable.MvxImageView;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxImageView_MvxSource = global::CodeCamp.Droid.Resource.Styleable.MvxImageView_MvxSource;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxListView = global::CodeCamp.Droid.Resource.Styleable.MvxListView;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::EShyMedia.MvvmCross.Plugins.Settings.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::CodeCamp.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
 			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxBind = global::CodeCamp.Droid.Resource.Attribute.MvxBind;
 			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxDropDownItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::MvvmCross.Android.Controls.SectionedRecyclerView.Resource.Attribute.MvxGroupItemTemplate = global::CodeCamp.Droid.Resource.Attribute.MvxGroupItemTemplate;

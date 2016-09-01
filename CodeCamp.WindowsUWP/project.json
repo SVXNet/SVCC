@@ -1,8 +1,11 @@
 ﻿{
   "dependencies": {
+    "EShyMedia.MvvmCross.Plugins.Settings": "2.0.4",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "MvvmCross": "4.2.3",
+    "MvvmCross.Plugin.File": "4.2.3",
     "MvvmCross.Plugin.Json": "4.2.3",
+    "MvvmCross.Plugin.Visibility": "4.2.3",
     "MvvmCross.StarterPack": "4.2.3"
   },
   "frameworks": {
