@@ -15,7 +15,7 @@ namespace CodeCamp.Core.ViewModels
         {
         }
 
-        //public ObservableRangeCollection<Session> Sessions { get; set; } = new ObservableRangeCollection<Session>();
+        #region Properties
 
         public ObservableRangeCollection<Grouping<string, Session>> GroupedSessions { get; set; } = new ObservableRangeCollection<Grouping<string, Session>>();
 
@@ -26,6 +26,28 @@ namespace CodeCamp.Core.ViewModels
             set { SetProperty(ref _selectedSession, value); }
         }
 
+        private string _searchText;
+        public string SearchText
+        {
+            get { return _searchText; }
+            set { SetProperty(ref _searchText, value); }
+        }
+
+        private bool _favoritesOnly;
+        public bool FavoritesOnly
+        {
+            get { return _favoritesOnly; }
+            set { SetProperty(ref _favoritesOnly, value); }
+        }
+
+        private bool _futureOnly = true;
+        public bool FutureOnly
+        {
+            get { return _futureOnly; }
+            set { SetProperty(ref _futureOnly, value); }
+        }
+
+        #endregion
 
         public override async void Start()
         {
@@ -40,7 +62,7 @@ namespace CodeCamp.Core.ViewModels
             IsBusy = true;
 
             //var sessions = await Service.GetAllSessionsAsync();
-            var sessions = await Service.GetSessionsAsync("", false, false, null);
+            var sessions = await Service.GetSessionsAsync(SearchText,FavoritesOnly,FutureOnly, null);
 
             //sort and group sessions
             var sorted = from session in sessions
