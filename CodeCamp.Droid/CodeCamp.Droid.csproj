@@ -55,7 +55,7 @@
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="MvvmCross.Android.Controls.SectionedRecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Android.Controls.SectionedRecyclerView.1.0.0-beta2\lib\MonoAndroid403\MvvmCross.Android.Controls.SectionedRecyclerView.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Android.Controls.SectionedRecyclerView.1.0.0\lib\MonoAndroid403\MvvmCross.Android.Controls.SectionedRecyclerView.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
