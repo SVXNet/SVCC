@@ -49,6 +49,18 @@ namespace CodeCamp.Core.Services
             return sessions.FirstOrDefault(s => s.id == sessionId);
         }
 
+        public async Task<List<Tag>> GetSessionTagsAsync()
+        {
+            var sessions = await GetSessionsAsync();
+            var tags =
+                sessions.SelectMany(s => s.tagsResults)
+                    .GroupBy(t=>t.id)
+                    .Select(grp => new Tag {Id=grp.Key,Name=grp.First().tagName.Trim(),Count=grp.Count() })
+                    .OrderBy(t => t.Name);
+
+            return tags.ToList();
+        }
+
         public Task AddSessionToFavorites(int sessionId)
         {
             throw new NotImplementedException();

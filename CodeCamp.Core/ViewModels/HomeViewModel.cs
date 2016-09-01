@@ -47,6 +47,15 @@ namespace CodeCamp.Core.ViewModels
             set { SetProperty(ref _futureOnly, value); }
         }
 
+        private List<Tag> _tags;
+
+        public List<Tag> Tags
+        {
+            get { return _tags; }
+            set { SetProperty(ref _tags, value); }
+        }
+
+
         #endregion
 
         public override async void Start()
@@ -54,6 +63,8 @@ namespace CodeCamp.Core.ViewModels
             base.Start();
 
             await LoadSessionsAsync();
+
+            await LoadTagsAsync();
         }
 
         private async Task LoadSessionsAsync()
@@ -72,6 +83,14 @@ namespace CodeCamp.Core.ViewModels
             GroupedSessions.Clear();
             GroupedSessions.AddRange(sorted);
 
+            IsBusy = false;
+        }
+
+        private async Task LoadTagsAsync()
+        {
+            BusyMessage = "Loading tags...";
+            IsBusy = true;
+            Tags = await Service.GetSessionTagsAsync();
             IsBusy = false;
         }
 

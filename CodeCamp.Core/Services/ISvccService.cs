@@ -19,6 +19,8 @@ namespace CodeCamp.Core.Services
 
         Task<Session> GetSessionDetailsAsync(int sessionId);
 
+        Task<List<Tag>> GetSessionTagsAsync();
+
         Task AddSessionToFavorites(int sessionId);
 
         Task RemoveSessionFromFavorites(int sessionId);
