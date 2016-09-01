@@ -14,6 +14,7 @@ namespace CodeCamp.Core.Services
     {
         private const string SessionsUrl = "https://www.siliconvalley-codecamp.com/rest/session/arrayonly";
         private const string SessionsFileName = "sessions.json";
+        private const int SessionRefreshAfterMinutes = 5;
         private readonly IMvxJsonConverter _jsonConverter;
         private readonly IMvxFileStore _fileStore;
 
@@ -74,7 +75,7 @@ namespace CodeCamp.Core.Services
 
         private async Task<List<Session>> GetSessionsAsync(bool forceRefresh = false)
         {
-            if (forceRefresh || (DateTime.UtcNow - Settings.LastSyncTime).TotalMinutes > 5 || !_fileStore.Exists(SessionsFileName))
+            if (forceRefresh || (DateTime.UtcNow - Settings.LastSyncTime).TotalMinutes >= SessionRefreshAfterMinutes || !_fileStore.Exists(SessionsFileName))
             {
                 await DownloadSessionsAsync();
             }
@@ -106,6 +107,11 @@ namespace CodeCamp.Core.Services
             Settings.LastSyncTime = DateTime.UtcNow;
         }
 
+        /// <summary>
+        /// This method is for testing only (since sessions aren't scheduled yet)
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         private DateTime GetRandomSessionTime(int num)
         {
             switch (num)
