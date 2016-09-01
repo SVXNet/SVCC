@@ -5,11 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:paddingBottom="5dp"
+    android:paddingTop="15dp">
     <TextView
         local:MvxBind="Text Key"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-         />
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:text="9:30 AM Saturday"
+        android:textStyle="bold"
+        android:textColor="@color/material_deep_teal_500" />
 </LinearLayout>

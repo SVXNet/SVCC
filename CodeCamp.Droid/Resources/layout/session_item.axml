@@ -5,11 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minWidth="25px"
-    android:minHeight="25px">
-    <TextView
-        local:MvxBind="Text title"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+    android:minHeight="25px"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+  <TextView
+      local:MvxBind="Text title"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        />
+  <TextView
+      local:MvxBind="Text descriptionShort"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        />
 </LinearLayout>

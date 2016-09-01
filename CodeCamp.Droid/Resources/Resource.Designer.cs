@@ -3886,9 +3886,6 @@ namespace CodeCamp.Droid
 			// aapt resource value: 0x7f06004f
 			public const int textSpacerNoButtons = 2131099727;
 			
-			// aapt resource value: 0x7f060081
-			public const int textView1 = 2131099777;
-			
 			// aapt resource value: 0x7f06007a
 			public const int time = 2131099770;
 			
