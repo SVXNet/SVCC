@@ -84,10 +84,9 @@ namespace CodeCamp.Core.Services
             var sessions = _jsonConverter.DeserializeObject<Session[]>(sessionData);
 
 #if DEBUG
-            var rnd = new Random();
             foreach (var session in sessions)
             {
-                var num = rnd.Next(1, 13);
+                var num = (session.id%11)+1;
                 session.sessionStartDate = GetRandomSessionTime(num);
                 session.sessionTime = session.sessionStartDate.ToString("hh:mm tt dddd");
                 session.startTime = num.ToString();
