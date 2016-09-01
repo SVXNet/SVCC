@@ -39,16 +39,9 @@ namespace CodeCamp.Core.ViewModels
             BusyMessage = "Loading sessions...";
             IsBusy = true;
 
-            var sessions = await Service.GetAllSessionsAsync();
-#if DEBUG
-            var rnd = new Random();
-            foreach (var session in sessions)
-            {
-                var num = rnd.Next(1, 13);
-                session.sessionTime = GetRandomSessionTime(num);
-                session.startTime = num.ToString();
-            }
-#endif
+            //var sessions = await Service.GetAllSessionsAsync();
+            var sessions = await Service.GetSessionsAsync("", false, false, null);
+
             //sort and group sessions
             var sorted = from session in sessions
                          orderby session.startTime
@@ -60,37 +53,5 @@ namespace CodeCamp.Core.ViewModels
             IsBusy = false;
         }
 
-        private string GetRandomSessionTime(int num)
-        {
-            switch (num)
-            {
-                case 1:
-                    return "9:30 AM Saturday";
-                case 2:
-                    return "10:45 AM Saturday";
-                case 3:
-                    return "12:30 AM Saturday";
-                case 4:
-                    return "1:45 AM Saturday";
-                case 5:
-                    return "3:00 AM Saturday";
-                case 6:
-                    return "4:15 AM Saturday";
-                case 7:
-                    return "8:30 AM Sunday";
-                case 8:
-                    return "9:45 AM Sunday";
-                case 9:
-                    return "11:00 AM Sunday";
-                case 10:
-                    return "12:30 AM Sunday";
-                case 11:
-                    return "1:45 AM Sunday";
-                case 12:
-                    return "3:00 AM Sunday";
-            }
-
-            return "";
-        }
     }
 }

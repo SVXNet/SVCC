@@ -14,5 +14,13 @@ namespace CodeCamp.Core.Services
              
              */
         Task<List<Session>> GetAllSessionsAsync();
+
+        Task<List<Session>> GetSessionsAsync(string searchText, bool favoritesOnly, bool futureOnly, string[] tags);
+
+        Task<Session> GetSessionDetailsAsync(int sessionId);
+
+        Task AddSessionToFavorites(int sessionId);
+
+        Task RemoveSessionFromFavorites(int sessionId);
     }
 }
