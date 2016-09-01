@@ -5,31 +5,43 @@
     xmlns:local="using:CodeCamp.WindowsUWP.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:helpers="using:CodeCamp.Core.Helpers"
+    xmlns:models="using:CodeCamp.Core.Models"
     mc:Ignorable="d">
     <local:BaseView.Resources>
-        <CollectionViewSource  x:Key="groupedSessions" 
+        <CollectionViewSource  x:Name="GroupedSessionsResource" 
                                Source="{Binding GroupedSessions, Mode=OneWay}"
                                IsSourceGrouped="True" />
-        <DataTemplate x:Key="SessionItemTemplate">
+        <DataTemplate x:Key="SessionItemTemplate" x:DataType="models:Session">
             <Grid>
-                <TextBlock Text="{Binding title}"></TextBlock>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{x:Bind title}"/>
+                <TextBlock Grid.Row="1" Text="{x:Bind descriptionShort}" TextWrapping="Wrap"/>
             </Grid>
         </DataTemplate>
+        
     </local:BaseView.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView ItemsSource="{Binding Source={StaticResource groupedSessions}}" SelectedItem="{Binding SelectedSession, Mode=TwoWay}" ItemTemplate="{StaticResource SessionItemTemplate}">
+        <ListView ItemsSource="{x:Bind GroupedSessionsResource.View}"
+                  ItemTemplate="{StaticResource SessionItemTemplate}"
+                  SelectionMode="Single"
+                  ShowsScrollingPlaceholders="True"
+                  >
 
             <ListView.GroupStyle>
-                <GroupStyle>
+                <GroupStyle >
                     <GroupStyle.HeaderTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Key}"></TextBlock>
+                        <DataTemplate >
+                            <TextBlock Text="{Binding Key}" 
+                                       Style="{ThemeResource TitleTextBlockStyle}"/>
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
                 </GroupStyle>
             </ListView.GroupStyle>
-        </ListView>
-
+        </ListView>        
     </Grid>
 </local:BaseView>
