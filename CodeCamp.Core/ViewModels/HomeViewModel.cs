@@ -73,7 +73,8 @@ namespace CodeCamp.Core.ViewModels
             IsBusy = true;
 
             //var sessions = await Service.GetAllSessionsAsync();
-            var sessions = await Service.GetSessionsAsync(SearchText,FavoritesOnly,FutureOnly, null);
+            var tags = Tags?.Where(t => t.Selected).Select(t => t.Id).ToArray();
+            var sessions = await Service.GetSessionsAsync(SearchText,FavoritesOnly,FutureOnly, tags);
 
             //sort and group sessions
             var sorted = from session in sessions

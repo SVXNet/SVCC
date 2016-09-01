@@ -15,7 +15,7 @@ namespace CodeCamp.Core.Services
              */
         Task<List<Session>> GetAllSessionsAsync();
 
-        Task<List<Session>> GetSessionsAsync(string searchText, bool favoritesOnly, bool futureOnly, string[] tags);
+        Task<List<Session>> GetSessionsAsync(string searchText, bool favoritesOnly, bool futureOnly, int[] tags);
 
         Task<Session> GetSessionDetailsAsync(int sessionId);
 

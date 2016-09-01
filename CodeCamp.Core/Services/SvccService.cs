@@ -29,7 +29,7 @@ namespace CodeCamp.Core.Services
             return sessions;
         }
 
-        public async Task<List<Session>> GetSessionsAsync(string searchText, bool favoritesOnly, bool futureOnly, string[] tags)
+        public async Task<List<Session>> GetSessionsAsync(string searchText, bool favoritesOnly, bool futureOnly, int[] tags)
         {
             var sessions = await GetSessionsAsync();
             
@@ -37,7 +37,8 @@ namespace CodeCamp.Core.Services
                 sessions.Where(
                     s =>
                         (string.IsNullOrWhiteSpace(searchText) || s.title.ToLower().Contains(searchText) || s.description.ToLower().Contains(searchText) || s.speakersNamesCsv.ToLower().Contains(searchText)) &&
-                        (!futureOnly || s.sessionStartDate>=DateTime.Now)
+                        (!futureOnly || s.sessionStartDate>=DateTime.Now)  &&
+                        s.tagsResults.Any(t=> tags==null || tags.Contains(t.id))
                         );
 
             return query.ToList();
