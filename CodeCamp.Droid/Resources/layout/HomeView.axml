@@ -4,11 +4,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-      android:padding="20dp">
-    <MvvmCross.Android.Controls.SectionedRecyclerView.MvxSectionedRecyclerView
+    android:padding="20dp">
+    <MvvmCross.Controls.Android.SectionedRecyclerView.MvxSectionedRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        
         local:MvxBind="ItemsSource GroupedSessions"
         local:MvxItemTemplate="@layout/session_item"
         local:MvxGroupItemTemplate="@layout/sessions_headeritem" />
